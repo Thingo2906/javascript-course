@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+   
+
+    <script>
+
+      console.log(3 > 5)
+
+      //== will convert '5' to number
+      console.log( 5 == '5')
+      console.log(5 === '5')
+
+      if (false){
+        console.log('hello')
+      } else{
+        console.log('else')
+      }
+      
+      const age = 15;
+      if(age >= 16){
+        console.log('You can drive')
+      } else if(age >= 14){
+        console.log('Almost there!')
+        
+      } else{
+        console.log('you cannot drive')
+      }
+      console.log(true && true)
+      console.log(true || false)
+
+      //Falsy values: false 0 '' NaN undefined null
+      // NaN: not a number
+      // this code will not printed because 0 is falsy
+      if (0){
+        console.log('truthy')
+      } 
+
+      // If cartQunatity is not falsy, the cart has products
+      if(cartQuantity){
+        console.log('cart has product')
+      }
+      
+      //get NaN
+      console.log('text'/5)
+
+      //get undefined
+      // if we use const, we need value for it
+      // const variable1 = 'undefined'
+      variable1 
+      let variable1;
+      console.log(variable1);
+
+      //Ternary operator, similar to if statement
+      //if true, it shows truthy, if not true, it shows falsy
+      const result = true ? 'truthy' : 'falsy'
+      console.log(result)
+      
+     // GUARD operator
+     //shortcut of if statement
+     // mean if it is false, we console.log 'hello'
+      const message = false && console.log('hello')
+      const message1 = 5 && 'hello'
+      console.log(message);
+
+      // DEFAULT OPERATOR
+      //get result is: EUR
+      const currency = 'EUR' || 'USD';
+      console.log(currency)
+
+
+
+    </script>
+  </body>
+</html>

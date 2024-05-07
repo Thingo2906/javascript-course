@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class ="js-button">Second button</button>
+   
+   <script>
+
+    // Each html element is an object that has innerHTML property
+
+    console.log(document.querySelector('button'));
+    document.querySelector('button')
+      .innerHTML = 'changed';
+
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+
+
+
+    // document is buit-in object of js, body is also an object. body and tittle is property of document object
+    /*
+    console.log(document.title);
+    
+    // This will change the title of the page
+    document.title = 'Changed';
+
+
+    //This will show the body html element of body. not the <script>
+    // document.body is an object
+    console.log(document.body);
+
+    // This will show everything inside body including the <script>
+     console.log(document.body.innerHTML)
+    
+    // This code will remove everything inside thebody of the page 
+    document.body.innerHTML = '<button>Good Job!</button>';
+    */
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12 exercise</title>
+  </head>
+  <body>
+    <button class ='start-button' onclick ="changeButton()">Start</button>
+   
+    <button class = "add-button" onclick ="addItem()">Add to cart</button>
+    <p class ='add-message'></p>
+  
+   
+    <script>
+       let idTimeout;
+       function addItem(){
+        const addMessage = document.querySelector('.add-message')
+        addMessage.innerHTML = 'Added';
+        clearTimeout(idTimeout);
+      
+        idTimeout = setTimeout(function(){
+        
+          addMessage.innerHTML = '';
+
+        }, 2000)
+       }
+
+     
+      function changeButton(){
+        const button = document.querySelector('.start-button');
+        button.innerHTML = 'Loading...';
+       
+        setTimeout(function(){
+        button.innerHTML = 'Finished'
+        }, 1000)
+       
+
+
+
+
+      }
+     
+
+      const add = function(){
+        console.log(2+3);
+      }
+      add()
+
+      function runTwice(add){
+        add();
+
+      }
+      runTwice(function(){
+        console.log(2+3);
+        console.log(2+3);
+      })
+
+    </script>
+  </body>
+</html>

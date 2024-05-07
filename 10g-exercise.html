@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice toggled</title>
+    <style>
+      .gaming-button, .music-button, 
+      .tech-button{
+        border: none;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      .is-toggled{
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="toggleButton('gaming-button')" class="gaming-button">Gaming</button>
+    <button onclick="toggleButton('music-button')" class="music-button">Music</button>
+    <button onclick="toggleButton('tech-button')" class="tech-button">Tech</button>
+
+    <script>
+      function toggleButton(buttonClass){
+        const button = document.querySelector("." + buttonClass)
+        if (!button.classList.contains('is-toggled')){
+
+          turnOffPreviousButton()
+
+          button.classList.add('is-toggled')
+          
+        } else{
+          button.classList.remove('is-toggled');
+         
+        }
+
+      }
+
+      function turnOffPreviousButton(){
+        const previousButton = document.querySelector(".is-toggled");
+        if (previousButton) {
+           previousButton.classList.remove('is-toggled');
+          
+        }
+       
+      }
+    </script>
+  </body>
+</html>

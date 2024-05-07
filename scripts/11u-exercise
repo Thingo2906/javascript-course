@@ -1,0 +1,20 @@
+function removeEgg(foods){
+  let result = [];
+  const reverse_foods = foods.slice().reverse();
+  let egg_count = 0;
+  for (let i =0; i<= reverse_foods.length -1; i++){
+    if (reverse_foods[i] === 'egg' && egg_count < 2){
+      egg_count ++;
+
+    } else{
+      result.push(reverse_foods[i]);
+
+    }
+
+
+  }
+  return result.reverse();
+}
+const foods = ['egg', 'apple', 'egg', 'egg', 'ham']
+console.log(removeEgg(foods));
+console.log(foods)

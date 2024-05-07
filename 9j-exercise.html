@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+  </head>
+  <body>
+    <p class ="result"></p>
+    <button onclick ="Calculator(1)">1</button>
+    <button onclick ="Calculator(2)">2</button>
+    <button onclick ="Calculator(3)">3</button>
+    <button onclick ="Calculator('+')">+
+    </button>
+    <script>
+    
+      let operation = localStorage.getItem('operation')|| ""
+      function Calculator(value){
+        if (value === 1){
+          operation += 1;
+          
+        } else if (value === 2){
+          operation += 2;
+        } else if(value === 3){
+          operation += 3;
+        } else{
+          operation = operation + ` ${value} `;
+
+        }
+        localStorage.setItem('operation', operation);
+        document.querySelector('.result').innerHTML = operation;
+        }
+
+       
+      
+    </script>
+    
+
+  </body>
+</html>

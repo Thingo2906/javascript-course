@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and loops</title> 
+    <link rel="stylesheet" href="styles/11-todo-list.css">
+  </head>
+  <body>
+   <script>
+    // array is a reference, 
+    //Thus, use slice() to make a copy of an array.
+    // We can use Array.from(array1)
+    // Or spread operator : [...array1]
+    const array1 =[1, 2, 3]
+    const array2 = array1.slice();
+    // It will only add 4 to array2, not array1
+    array2.push(4);
+
+    // It will take the first value: 1, and save it in the firstValue variable, and same with the second one
+    const [firstValue, secondValue] = [1, 2, 3]
+
+    //break = exit the loop
+    // continue = skip the rest of the current iteration
+    for (let i=1; i<= 10; i++){
+      if (i%3===0){
+        continue;
+      }
+      console.log(i);
+      if (i ===8){
+        break;
+      }
+    }
+
+    let i =1;
+    while (i <=10){
+      if (i %3 ===0){
+        // in while loop, if we want to use continue, we shoule manual update the increment of i;
+        i++;
+        continue;
+      }
+      console.log(i);
+      i++;
+    }
+
+    function doubleArray(array){
+      const numsDoubled =[];
+      for (let i = 0; i<=array.length -1; i++ ){
+        if (array[i]===0){
+          // we can use return statement to break the loop or 'break' to exit the loop
+          return numsDoubled;
+        }
+        numsDoubled.push(array[i]*2)
+      }
+      return numsDoubled
+    }
+    console.log(doubledArray([2, 3, 4]));
+    
+   </script>
+    
+  </body>
+</html>

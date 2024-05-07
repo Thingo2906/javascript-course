@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9g practice</title>
+  </head>
+  <body>
+    <input placeholder="cost-of-order" class ="input-cost" onkeydown="handleKeydown(event)">
+    <button onclick="calculate()">Calculate</button>
+    <p class="total-cost"></p>
+
+    <script>
+      function calculate(){
+        const totalCost = document.querySelector('.total-cost');
+        const inputCost = document.querySelector('.input-cost');
+        let cost = Number(inputCost.value);
+        if (cost < 40){
+          cost = (cost*100 + 1000)/100;
+        }
+        totalCost.innerHTML  = `$${cost}`
+      }
+
+      function handleKeydown(event){
+        if (event.key === "Enter"){
+          calculate();
+        }
+
+      }
+    </script>
+  </body>
+</html>

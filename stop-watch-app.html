@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stop watch app</title>
+  </head>
+  <body>
+    <p class = "timer">0:00</p>
+    <button class ="start-button" onclick ="startTime()">start</button>
+    <button class ="stop-button" onclick ="stopTime()">Stop</button>
+    <button class ="reset-button" onclick ="resetTime()">Reset</button>
+    <script>
+      let timer;
+      let second = 0;
+      
+      function setTime(){
+        const minutes = Math.floor(second / 60);
+        const remainSeconds = second % 60;
+        document.querySelector(".timer").innerHTML = `${minutes}:${remainSeconds < 10 ? '0' : ''}${remainSeconds}`;
+        second++;
+
+      }
+
+      function startTime(){
+        timer = setInterval(setTime, 1000)
+      }
+
+      function stopTime(){
+        clearInterval(timer);
+      }
+
+      function resetTime(){
+        clearInterval(timer);
+        second = 0;
+        setTime();
+      }
+       
+
+      
+
+
+    </script>
+  </body>
+</html>

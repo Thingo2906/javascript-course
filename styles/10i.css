@@ -1,0 +1,44 @@
+body{
+  background-color: black;
+}
+
+.result{
+  font-size: 40px;
+  color: white;
+}
+.group-button{
+  margin-bottom: 10px;
+}
+.icon-button{
+  background-color: rgb(101, 98, 98);
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  margin-right: 5px;
+  
+}
+.clear-button{
+  background-color: rgb(101, 98, 98);
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+
+}
+.operator-button{
+  background-color: rgb(255, 187, 0) ;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
